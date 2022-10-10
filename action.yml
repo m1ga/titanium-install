@@ -43,6 +43,7 @@ runs:
         ${{ runner.OS }}-
 
   - name: Install Titanium
+    shell: bash
     run: |
       sudo npm i -g titanium appcelerator alloy
 
