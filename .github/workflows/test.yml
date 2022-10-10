@@ -1,0 +1,19 @@
+name: Test Workflow
+on:
+  pull_request:
+  push:
+
+jobs:
+  test:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [macos-latest]
+        ti_version: "11.1.1.GA"
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install Ti
+        uses: ./
+        with:
+          version:  ${{ matrix.ti_version }}
+      - run: ti --version
