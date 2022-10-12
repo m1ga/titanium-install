@@ -21,7 +21,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Install Titanium SDK
-        uses:  m1ga/titanium-install@1.0.0
+        uses:  m1ga/titanium-install@v1
         with:
           version: 11.1.1.GA
       - name: Output version

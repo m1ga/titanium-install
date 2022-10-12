@@ -45,7 +45,7 @@ runs:
   - name: Install Titanium
     shell: bash
     run: |
-      sudo npm i -g titanium appcelerator alloy
+      sudo npm i -g titanium alloy
 
       ti sdk install ${{ inputs.version }}
       ti sdk select ${{ inputs.version }}
